@@ -41,7 +41,7 @@ if __name__ == "__main__":
       "sequence feature as well as a 'labels' int64 context feature.")
 
   flags.DEFINE_string(
-      "model", "LogisticModel", "Which Model to use: see models.py")
+      "model", "myModel", "Which Model to use: see models.py")
 
   flags.DEFINE_integer("batch_size", 64,
                        "How many examples to process per batch.")

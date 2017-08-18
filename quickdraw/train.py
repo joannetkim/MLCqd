@@ -42,7 +42,7 @@ if __name__ == "__main__":
       "File glob for the training dataset.")
 
   flags.DEFINE_string(
-      "model", "LogisticModel",
+      "model", "myModel",
       "Which architecture to use for the model. Models are defined "
       "in models.py.")
   flags.DEFINE_bool(
