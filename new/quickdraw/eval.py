@@ -129,7 +129,7 @@ def build_graph(reader,
 
   with tf.variable_scope("tower"):
     result = model.create_model(model_input,
-                                keep_prob=1.0,
+                                1.0,#keep_prob
                                 vocab_size=reader.num_classes,
                                 labels=labels_batch,
                                 is_training=False)
