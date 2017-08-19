@@ -49,7 +49,7 @@ class LogisticModel(BaseModel):
 class myModel(BaseModel):
   """Logistic model with L2 regularization."""
 
-  def create_model(self, model_input, num_classes=10, keep_prob=keep_prob, **unused_params):
+  def create_model(self, model_input, num_classes=10, keep_prob, **unused_params):
     """Creates a logistic model.
 
     Args:
