@@ -118,7 +118,7 @@ class myModel(BaseModel):
     h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
     # Dropout
-    keep_prob = tf.placeholder(tf.float32)
+    #keep_prob = tf.placeholder(tf.float32)
     h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
     # output
