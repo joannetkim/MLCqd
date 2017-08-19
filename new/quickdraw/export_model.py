@@ -82,6 +82,7 @@ class ModelExporter(object):
     with tf.variable_scope("tower"):
       result = self.model.create_model(
           model_input,
+          1.0, ###
           num_classes=self.reader.num_classes,
           labels=labels_batch,
           is_training=False)
