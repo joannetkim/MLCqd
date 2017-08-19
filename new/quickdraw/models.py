@@ -48,11 +48,11 @@ class LogisticModel(BaseModel):
 
 class myModel(BaseModel):
 
-  def create_model(self, model_input, keep_prob=keep_prob, **unused_params):
+  def create_model(self, model_input, keep_prob, **unused_params):
 
     x=slim.flatten(model_input)
-    W=tf.Variable(tf.zeros([2500,10]))
-    b=tf.Variable(tf.zeros([10]))
+    #W=tf.Variable(tf.zeros([2500,10]))
+    #b=tf.Variable(tf.zeros([10]))
 
     #avoid gradient 0 
     def weight_variable(shape):
@@ -104,7 +104,7 @@ class myModel(BaseModel):
     h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
     # Dropout
-    keep_prob = tf.placeholder(tf.float32)
+    #keep_prob = tf.placeholder(tf.float32)
     h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob=keep_prob)
 
     # output
