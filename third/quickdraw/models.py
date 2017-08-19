@@ -88,7 +88,7 @@ class myModel(BaseModel):
 
     #layer1 conv1
     x_image = tf.reshape(x, [-1,50,50,1])
-    # window 크기, input channel, output(=num of feat or filters)
+    # window size, input channel, output(=num of feat or filters)
     W_conv1_1 = weight_variable([3, 3, 1, 16])
     W_conv1_2 = weight_variable([3, 3, 16, 32])
     b_conv1_1 = bias_variable([16]) 
