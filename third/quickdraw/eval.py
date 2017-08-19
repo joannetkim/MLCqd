@@ -132,7 +132,7 @@ def build_graph(reader,
                                 vocab_size=reader.num_classes,
                                 labels=labels_batch,
                                 is_training=False,
-                                p_keep_prob=1.0)
+                                keep_prob=1.0)
     predictions = result["predictions"]
     tf.summary.histogram("model_activations", predictions)
     if "loss" in result.keys():

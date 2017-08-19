@@ -49,7 +49,7 @@ class LogisticModel(BaseModel):
 class myModel(BaseModel):
   """Logistic model with L2 regularization."""
 
-  def create_model(self, model_input, num_classes=10, p_keep_prob, **unused_params):
+  def create_model(self, model_input, num_classes=10, **unused_params):
     """Creates a logistic model.
 
     Args:
@@ -119,7 +119,7 @@ class myModel(BaseModel):
 
     # Dropout
     keep_prob = tf.placeholder(tf.float32)
-    h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob=p_keep_prob)
+    h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob=keep_prob)
 
     # output
     W_fc2 = weight_variable([1024, 10])
